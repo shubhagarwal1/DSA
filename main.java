@@ -72,17 +72,17 @@ public class main {
  * Array insertion basic 
  * Array length 
  */
-
+//---------------------------------------------------------
 // program to find the largest element from the array
-             int arr[]= {90,2,3,4,55,67,8,8};
-                        //0,1,2,3,4, 5, 6,7
-             int max = 0;
-             for(int i =0; i<arr.length; i++){
-                if(max<arr[i]){
-                    max=i;
-                } 
-             }
-             System.out.println("max "+ max);
+            //  int arr[]= {90,2,3,4,55,67,8,8};
+            //             //0,1,2,3,4, 5, 6,7
+            //  int max = 0;
+            //  for(int i =0; i<arr.length; i++){
+            //     if(max<arr[i]){
+            //         max=i;
+            //     } 
+            //  }
+            //  System.out.println("max "+ max);
         //max = 0
         //i = 0
         //arr[i]=90 
@@ -119,31 +119,119 @@ public class main {
         //67
 
 
-        
+//---------------------------------------------------------     
 //wap to find the second largest element from the array //TC: O(n) 
-int sl[]={1,2,3,4,5,6,7,8};
-int maxx = sl[0];
-int sm =0;
-for(int i =0; i<sl.length; i++){
-    if(sl[i]> maxx){
-        sm = maxx;
-    }else if (sl[i] < sm){
-            sm = sl[i];
-    }
+// int sl[]= {-1, -2, -3, -4, -57, -67, 57};
+//         // 0, 1, 2, 3, 4 , 5,  6
+//         int largest =  Integer.MIN_VALUE; 
+//         int secondLargest = Integer.MIN_VALUE;
+            
+//         for(int i =0; i<sl.length; i++){
+//             if(sl[i]>largest){
+//                 secondLargest = largest;                
+//                 largest = sl[i];
+//             }
+//             else if(sl[i]> secondLargest && sl[i] != largest ){
+//                 secondLargest = sl[i];
+//             }
+//         }
+//         System.out.println(secondLargest);
+
+//l = 1
+//sl = -1
+//sl[i] = 1
+//i=0
+//sl.legnth = 8
+
+//l = 67
+//sl = 57
+//sl[i] = 57
+//i=6
+//sl.legnth = 7
+
+//---------------------------------------------------------
+
+//wap to find the smallest element in the given array 
+// int smallestElement [] = {1,2,3,4,5,4};
+
+// int s = Integer.MAX_VALUE; 
+// for(int i =0; i<smallestElement.length; i++ ){
+//     if(smallestElement[i]<s){
+//         s = smallestElement[i];
+//     }
+// }
+ 
+// System.out.println(s);
+
+//---------------------------------------------------------
+//wap to find the second smallest element
+// int arr [] = {1,2,3,4,5,4};
+//     int smallest = Integer.MAX_VALUE; ;
+//     int secondSmallest= Integer.MAX_VALUE; 
+
+//     for(int i=0; i<arr.length; i++){
+//         if(arr[i]<smallest){
+//             secondSmallest = smallest;
+//             smallest = arr[i];
+//         }
+//         else if (arr[i]<secondSmallest && arr[i] != smallest ){
+//             secondSmallest = arr[i];
+//         }
+//     }
+//     System.out.println(secondSmallest);
+//---------------------------------------------------------
+
+//each one of them has bucket with 0 apples 
+//initially alex picks 0th index apples 
+//alex and alice plays a game
+//turn by turn  picks a number 
+//adds the number to their buccket and add them to previous one 
+//return the one with max apples 
+
+//int arr[]= {12,2,3,4,5,5,5}
+
+//starting 
+//answer condition
+//ending 
+
+//how to find whoes turn
+
+int alexBucket =  0;
+int aliceBucket = 0;
+
+boolean turn = false;
+//true = alex
+//flase = alice 
+
+int bucket[]={1,2,3,4,5,5,6,7};
+            //0,1,2,3,4,5,6,7     
+alexBucket = bucket[0];
+
+for(int i=1; i<bucket.length; i++){
+   if(turn == true){
+    alexBucket += bucket[i];
+    turn = false;
+   }
+   else{
+    aliceBucket += bucket[i];
+    turn = true;
+   }
 }
-System.out.println(sm);
 
 
+System.out.println(alexBucket + " " + aliceBucket);
 
 
-//maxx = 1
-//sm = 1
-//i = 2
-//sl[i]= 3
-//sl.length = 8
+//alexbucket = 1
+//alicebucket = 2
+//bucket[i] = 2
+//i= 1
+//turn = true
+//bucket.length =8
 
+//------------------------------------------------------------------------
 
-
+//wap to count the elements greater then given value 
 
 
 
