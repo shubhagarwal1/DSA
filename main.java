@@ -189,39 +189,29 @@ public class main {
 //return the one with max apples 
 
 //int arr[]= {12,2,3,4,5,5,5}
-
 //starting 
 //answer condition
 //ending 
-
 //how to find whoes turn
-
-int alexBucket =  0;
-int aliceBucket = 0;
-
-boolean turn = false;
-//true = alex
-//flase = alice 
-
-int bucket[]={1,2,3,4,5,5,6,7};
-            //0,1,2,3,4,5,6,7     
-alexBucket = bucket[0];
-
-for(int i=1; i<bucket.length; i++){
-   if(turn == true){
-    alexBucket += bucket[i];
-    turn = false;
-   }
-   else{
-    aliceBucket += bucket[i];
-    turn = true;
-   }
-}
-
-
-System.out.println(alexBucket + " " + aliceBucket);
-
-
+// int alexBucket =  0;
+// int aliceBucket = 0;
+// boolean turn = false;
+// //true = alex
+// //flase = alice 
+// int bucket[]={1,2,3,4,5,5,6,7};
+//             //0,1,2,3,4,5,6,7     
+// alexBucket = bucket[0];
+// for(int i=1; i<bucket.length; i++){
+//    if(turn == true){
+//     alexBucket += bucket[i];
+//     turn = false;
+//    }
+//    else{
+//     aliceBucket += bucket[i];
+//     turn = true;
+//    }
+// }
+// System.out.println(alexBucket + " " + aliceBucket);
 //alexbucket = 1
 //alicebucket = 2
 //bucket[i] = 2
@@ -229,16 +219,68 @@ System.out.println(alexBucket + " " + aliceBucket);
 //turn = true
 //bucket.length =8
 
+
+
+int alex=0;
+int alice =0;
+
+
+
+
+//0=alex
+//1=alice
+//2=alex
+//3=alice
+//4=alex
+//5= alice
+//6 = alex
+
+//i=4 alex
+//i+1 = alice
+int bucket[]={1,2,3,4,5,5,6,7};
+            //0,1,2,3,4,5,6,7    
+
+for(int i =0; i<bucket.length; i++){
+    alex += bucket[i];
+    if(i+1 < bucket.length){
+        alice += bucket[i+1];
+    }
+    i++;
+}
+System.out.println("alex:" + alex + " " + "alice:" + alice);
+
+//alex =1
+//alice = 2
+//i = 0
+//bucket[i]= 1
+//bucket[i+1] = 2
+//bucket.length = 8
+
+//alex =1+3
+//alice = 2+4
+//i = 2
+//bucket[i]= 3
+//bucket[i+1] = 4
+//bucket.length = 8
+
+//alex =1+3+5
+//alice = 2+4+5
+//i = 4
+//bucket[i]= 5
+//bucket[i+1] = 5
+//bucket.length = 8
+
+
+//alex =1+3+5+6
+//alice = 2+4+5+7
+//i = 6
+//bucket[i]= 6
+//bucket[i+1] = 7
+//bucket.length = 8
+
 //------------------------------------------------------------------------
 
 //wap to count the elements greater then given value 
-
-
-
-
-
-
-
 
 
 
