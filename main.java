@@ -221,8 +221,8 @@ public class main {
 
 
 
-int alex=0;
-int alice =0;
+// int alex=0;
+// int alice =0;
 
 
 
@@ -237,17 +237,17 @@ int alice =0;
 
 //i=4 alex
 //i+1 = alice
-int bucket[]={1,2,3,4,5,5,6,7};
-            //0,1,2,3,4,5,6,7    
+// int bucket[]={1,2,3,4,5,5,6,7};
+//             //0,1,2,3,4,5,6,7    
 
-for(int i =0; i<bucket.length; i++){
-    alex += bucket[i];
-    if(i+1 < bucket.length){
-        alice += bucket[i+1];
-    }
-    i++;
-}
-System.out.println("alex:" + alex + " " + "alice:" + alice);
+// for(int i =0; i<bucket.length; i++){
+//     alex += bucket[i];
+//     if(i+1 < bucket.length){
+//         alice += bucket[i+1];
+//     }
+//     i++;
+// }
+// System.out.println("alex:" + alex + " " + "alice:" + alice);
 
 //alex =1
 //alice = 2
@@ -283,6 +283,310 @@ System.out.println("alex:" + alex + " " + "alice:" + alice);
 //wap to count the elements greater then given value 
 
 
+// //my name is utkarsh
+// String para = "my name is utkarsh";
+// //ym eman si ksraktu
 
+// String arr[] = para.split(" ");
+
+// String finalString="";
+// // System.out.println(arr[0].length()+" " + arr[0].charAt(0));
+
+// for(int i =0; i<arr.length; i++){
+//     int length = arr[i].length()-1;
+//     String str ="";
+//     for(int j = length; j>=0; j--){
+//             char ch = arr[i].charAt(j);
+//             str =str + ch;
+//     }
+//     finalString = finalString + str + " ";
+   
+// }
+
+// System.out.println(finalString);
+
+
+
+ 	
+// Write a program to find out the difference between sum of all the elements in two arrays arr1 and arr2.
+// 3
+// 1 2 10
+// 3
+// 3 4 1
+// First array is larger
+
+
+// int arr[]= {1,2,34,5,5,-66,2};
+// int arr2[] = {2,3,5,6,8,6,5,4,3,45,-67,8,-88,0};
+
+//         int arrsum=0;
+//         int arr2sum=0;
+
+//     for(int i=0; i<arr.length; i++){
+//             arrsum += arr[i];
+//     }
+//     for(int i=0; i<arr2.length; i++){
+//         arr2sum += arr2[i];
+//     }
+
+//     if(arrsum>arr2sum){
+//         System.out.println("array one");
+//     }else{
+//         System.out.println("array two");
+//     }
+//O(n)
+
+
+
+//medium
+// Karan has an array arr and an integer k. He wants to find out the number of consecutive pairs of array elements whose sum will be k.
+// Write a program to count the number of consecutive pairs.
+// Note that, if arr[5]={1,2,3,4,5} then consecutive pairs are (1,2),(2,3),(3,4),(4,5).
+
+// array size =4
+// k = 3
+// int arr[]={1,2,1,2,1,2};
+//         // 0,1,2,3,4,5
+// int k =3;
+// int count =0;
+// //1
+// for(int i = 0; i<arr.length - 1;i++){
+//    System.out.println(arr[i]+" " + arr[i+1]);
+//    if(arr[i]+arr[i+1]== k){
+//     count++;
+//    }
+// }
+// System.out.println(count);
+
+//1,2
+//2,1
+//1,2
+//2,1
+//1,2
+//2,1
+//1,2
+//0,3
+//3,0
+//0,3
+//3,0
+//0,3
+
+
+
+
+// First line consists of an integer n1
+// Second line consists of n1 spaced integers, representing elements of arr1
+// Third line consists of an integer n2
+// Fourth line consists of n2 spaced integers, representing elements of arr2
+
+// 3
+// 3 2 1
+// 3
+// 1 2 3
+
+// 321 - 123 = 198
+
+
+//----------------------------------------------------
+//merge two sorted arrays
+// int arr[] ={1,5,3,2};
+// mergesort(arr, 0, 3);
+//     for(int i=0; i<arr.length; i++){
+//         System.out.println(arr[i]+ " ");
+//     }
+// }
+
+
+// public static void mergesort(int arr[], int right, int left){
+//     if(left>=right){
+//         return;
+//     }
+//     int mid = (right+left)/2;
+//     mergesort(arr, left, mid);
+//     mergesort(arr, mid+1, right);
+//     mergesortedArrrays(arr,left, mid, right);
+    
+// }
+
+
+
+
+// public static void mergesortedArrrays(int arr[], int left, int mid, int right){
+//     int n = mid - left+1;
+//     int m = right - mid;
+    
+//     int [] nums1 = new int [n];
+//     int [] nums2 = new int [m];
+//     int cur_idx = left;
+//     for(int i =0; i<n; i++){
+//         nums1[i] = arr[cur_idx];
+//         cur_idx++;
+//     }
+//     for(int i =0; i<m; i++){
+//         nums2[i] = arr[cur_idx];
+//         cur_idx++;
+//     }
+
+//     int i =0;
+//     int j =0;
+//     int k = left;
+
+//     while(i<n && j<m){
+//         if(nums1[i]<nums2[j]){
+//             arr[k]=nums1[i];
+//             i++;
+//         }else{
+//             arr[k]=nums2[j];
+//             j++;
+//         }
+//         k++;
+//     }
+
+
+//     while(i<n){
+//         arr[k]=nums1[i];
+//         i++;
+//         k++;
+//     }
+//     while(j<m){
+//         arr[k]=nums2[j];
+//         j++;
+//         k++;
+//     }
+
+
+// }
+
+//-------------------------------------------------------------------------------------
+//1,2,3,4,5,7,8,9,10,66,67
+//arr1[] size n
+//arr2[] size m
+//size of arr3 = n+m
+//we will two pointer one for arr1[] and other for arr[2]
+//when we will go out either of any arrays index then we will copy the bigger arrays left over elemets directly to the arr[]3
+
+
+int arr1[]={0,2,3,4,5,66,67};//i
+int arr2[]={7,8,9,10};//j
+int n = arr1.length;
+int m = arr2.length;
+int arr3[] = new int[n+m];
+int i =0;
+int j =0;
+int currentidx =0;
+
+while(i<n && j<m){
+    if(arr1[i]<arr2[j]){
+        arr3[currentidx] = arr1[i];
+        i++;
+        currentidx++;
+    }else{
+        arr3[currentidx] = arr2[j];
+        j++;
+        currentidx++;
+    }
 }
+while(i<n){
+    arr3[currentidx] = arr1[i];
+    i++;
+    currentidx++;
+}
+while(j<m){
+    arr3[currentidx] = arr2[j];
+    j++;
+    currentidx++;
+}
+
+for(int j1 =0; j1<arr3.length; j1++){
+        System.out.print(arr3[j1]+" ");
+}
+
+//i= 1
+//j= 0
+//arr1[i]= 1
+//arr2[j]=7
+//arr3[0]=1
+//current_idx= 1
+
+//i= 1
+//j= 0
+//arr1[i]= 2
+//arr2[j]= 7
+//arr3[1]= 1
+//current_idx= 1
+
+//i= 2
+//j= 0
+//arr1[i]= 3
+//arr2[j]= 7
+//arr3[1]= 1
+//current_idx= 2
+
+//i= 3
+//j= 0
+//arr1[i]= 4
+//arr2[j]= 7
+//arr3[1]= 1
+//current_idx= 3
+
+//i= 4
+//j= 0
+//arr1[i]= 5
+//arr2[j]= 7
+//arr3[1]= 1
+//current_idx= 4
+
+//i= 5
+//j= 0
+//arr1[i]= 66
+//arr2[j]= 7
+//arr3[1]= 1
+//current_idx= 5
+
+//i= 5
+//j= 1
+//arr1[i]= 66
+//arr2[j]=8
+//arr3[1]= 1
+//current_idx= 6
+
+//i= 5
+//j= 2
+//arr1[i]= 66
+//arr2[j]= 9
+//arr3[1]= 1
+//current_idx= 7
+
+//i= 5
+//j= 3
+//arr1[i]= 66
+//arr2[j]= 10
+//arr3[1]= 1
+//current_idx= 7
+
+//i= 5
+//j= 4
+//arr1[i]= 66
+//arr2[j]= 10
+//arr3[1]= 1
+//current_idx= 7
+
+//n = 7
+//m = 4
+
+//1,2,3,4,5,7,8,9,10
+
+//-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+    }
+
 }
