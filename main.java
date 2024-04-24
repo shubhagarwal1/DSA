@@ -466,40 +466,40 @@ public class main {
 //when we will go out either of any arrays index then we will copy the bigger arrays left over elemets directly to the arr[]3
 
 
-int arr1[]={0,2,3,4,5,66,67};//i
-int arr2[]={7,8,9,10};//j
-int n = arr1.length;
-int m = arr2.length;
-int arr3[] = new int[n+m];
-int i =0;
-int j =0;
-int currentidx =0;
+// int arr1[]={0,2,3,4,5,66,67};//i
+// int arr2[]={7,8,9,10};//j
+// int n = arr1.length;
+// int m = arr2.length;
+// int arr3[] = new int[n+m];
+// int i =0;
+// int j =0;
+// int currentidx =0;
 
-while(i<n && j<m){
-    if(arr1[i]<arr2[j]){
-        arr3[currentidx] = arr1[i];
-        i++;
-        currentidx++;
-    }else{
-        arr3[currentidx] = arr2[j];
-        j++;
-        currentidx++;
-    }
-}
-while(i<n){
-    arr3[currentidx] = arr1[i];
-    i++;
-    currentidx++;
-}
-while(j<m){
-    arr3[currentidx] = arr2[j];
-    j++;
-    currentidx++;
-}
+// while(i<n && j<m){
+//     if(arr1[i]<arr2[j]){
+//         arr3[currentidx] = arr1[i];
+//         i++;
+//         currentidx++;
+//     }else{
+//         arr3[currentidx] = arr2[j];
+//         j++;
+//         currentidx++;
+//     }
+// }
+// while(i<n){
+//     arr3[currentidx] = arr1[i];
+//     i++;
+//     currentidx++;
+// }
+// while(j<m){
+//     arr3[currentidx] = arr2[j];
+//     j++;
+//     currentidx++;
+// }
 
-for(int j1 =0; j1<arr3.length; j1++){
-        System.out.print(arr3[j1]+" ");
-}
+// for(int j1 =0; j1<arr3.length; j1++){
+//         System.out.print(arr3[j1]+" ");
+// }
 
 //i= 1
 //j= 0
@@ -578,15 +578,43 @@ for(int j1 =0; j1<arr3.length; j1++){
 
 //-------------------------------------------------------------------------------------
 
+//2D Array 
+int arr[][] = new int[5][5];
+int row=5;
+int col=5;
+int count =1;
 
-
-
-
-
-
-
-
-
+//insertion 
+for(int i =0; i<row; i++){
+    for(int j=0; j<col; j++){
+        arr[i][j]=count;
+        count++;
     }
+    System.out.println();
+}
 
+
+
+
+
+//print 2d array
+for(int i =0; i<row; i++){
+    for(int j=0; j<col; j++){
+        System.out.print(arr[i][j]+ " ");
+    }
+    System.out.println();
+}
+
+//initilse 2d array 
+//print empty matrix
+
+//print matrix from 1-n(each cell value)
+
+//print a binary matrix of 5,5
+
+//Print Matrix Column Wise
+
+
+
+    } 
 }
